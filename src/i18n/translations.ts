@@ -12,7 +12,13 @@ export const translations = {
     optimizationLevelBest: 'Excellent',
     optimizationLevelGood: 'Good',
     optimizationLevelOk: 'Fair',
-    optimizationLevelBasic: 'Basic'
+    optimizationLevelBasic: 'Basic',
+    fastOptimization: "Fast Optimization",
+    fastOptimizationDesc: "Advanced algorithms for instant SVG optimization",
+    secure: "Secure & Private",
+    secureDesc: "All processing done locally in your browser",
+    quality: "Quality Assured",
+    qualityDesc: "Maximum compression while maintaining visual quality",
   },
   zh: {
     title: 'SVG 批量优化工具',
@@ -27,6 +33,12 @@ export const translations = {
     optimizationLevelBest: '极致优化',
     optimizationLevelGood: '优秀',
     optimizationLevelOk: '良好',
-    optimizationLevelBasic: '一般'
+    optimizationLevelBasic: '一般',
+    fastOptimization: "快速优化",
+    fastOptimizationDesc: "采用先进算法，秒级完成SVG优化",
+    secure: "安全可靠",
+    secureDesc: "所有处理在本地完成，无需担心文件泄露",
+    quality: "质量保证",
+    qualityDesc: "在保持视觉质量的同时最大程度压缩文件",
   }
 }
