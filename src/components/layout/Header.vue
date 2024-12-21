@@ -5,14 +5,14 @@
   const { t } = useLanguage();
 
   const links = [
-    // { href: "https://twitter.com", icon: "𝕏", label: "Twitter" },
     {
       href: "https://github.com/wangyiyi2056/MiniSVG",
       icon: "⌨️",
       label: "GitHub",
     },
-    { href: "#about", icon: "ℹ️", label: t("about") },
   ];
+
+  defineEmits(["show-about"]);
 </script>
 
 <template>
@@ -32,18 +32,45 @@
         <span class="link-icon">{{ link.icon }}</span>
         <span class="link-text">{{ link.label }}</span>
       </a>
+      <a href="#" class="nav-link" @click.prevent="$emit('show-about')">
+        <span class="link-icon">ℹ️</span>
+        <span class="link-text">{{ t("about") }}</span>
+      </a>
       <LanguageSwitch />
     </nav>
   </header>
 </template>
 
 <style scoped>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .nav-link {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
     border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-primary);
     transition: background-color 0.2s;
   }
 

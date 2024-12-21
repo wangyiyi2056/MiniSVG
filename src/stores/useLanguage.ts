@@ -1,13 +1,21 @@
 import { ref } from 'vue';
-import { translations } from '../i18n/translations';
+import { translations, TranslationType } from '../i18n/translations';
 
-type Language = 'en' | 'zh';
+type Language = keyof TranslationType;
+type TranslationKey = keyof TranslationType["en"];
+type TranslationParams = Record<string, string>;
 
 const currentLanguage = ref<Language>('en');
 
 export function useLanguage() {
-  const t = (key: keyof typeof translations.en) => {
-    return translations[currentLanguage.value][key];
+  const t = (key: TranslationKey, params?: TranslationParams) => {
+    let text = translations[currentLanguage.value][key];
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        text = text.replace(`{${key}}`, value);
+      });
+    }
+    return text;
   };
 
   const toggleLanguage = () => {
