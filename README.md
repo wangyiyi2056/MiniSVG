@@ -1,25 +1,27 @@
 # Mini SVG - SVG 批量优化工具 | SVG Batch Optimizer
 
-[English](#english) | [中文](#chinese)
+<div align="center">
+  <a href="README.md">中文</a> | <a href="README_EN.md">English</a>
+</div>
 
-## English
+### 简介
 
-### Introduction
+Mini SVG 是一个免费且易用的 SVG 批量优化工具。它直接在浏览器中处理 SVG 文件，确保您的文件安全私密。
 
-Mini SVG is a free and easy-to-use tool for bulk SVG optimization. It processes SVGs directly in your browser, ensuring your files remain private and secure.
+### 特性
 
-### Features
+- 🚀 快速批量优化多个 SVG 文件
+- 🔒 100% 客户端处理 - 无需上传文件
+- 💪 使用 SVGO 进行强大的优化
+- 👀 实时预览对比
+- 📦 批量下载为 ZIP
+- 🌐 支持中英文界面
 
-- 🚀 Fast batch optimization of multiple SVG files
-- 🔒 100% client-side processing - no file uploads required
-- 💪 Powerful optimization with SVGO
-- 👀 Live preview comparison
-- 📦 Batch download as ZIP
-- 🌐 Supports English and Chinese
+### 开始使用
 
-### Getting Started
-
-1. Clone the repository:
+1. 克隆仓库
+2. 安装依赖：`npm install`
+3. 运行开发服务器：`npm run dev`
 
 ### 技术栈
 
